@@ -24,3 +24,13 @@ g = () =>{
 
  return sum;
 } // project euler 1st problem O(n) = 5 vs 2000n solution
+
+//euler 2nd problem
+let a = 1, b = 2;
+let total = 0;
+
+while (a <= 4000000) 
+  total += !(a&1) ? a : 0,  [a, b] = [b, a + b]; 
+
+//find sum of even fib numbers < 4mil, loop and check last bit for 0.
+
