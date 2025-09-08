@@ -7,3 +7,20 @@ f = (s) =>{
   // Find max n of 3n --> S//3 * 3
   // sum in gauss example (n0+nth)*n/2
   // pride
+
+f = (s,x) =>{
+  let nth = Math.floor(s/x);
+  let sum = (x+nth*x)*nth*0.5;
+  return sum;
+}
+
+let k = 999;
+let sum = f(k,3)+f(k,5)-f(k,15);
+
+g = () =>{
+ let sum = 0;
+  for(let i = 0; i < 1000; i++)
+   sum+= ((i%3)==0 || (i%5)==0) ? i : 0;
+
+ return sum;
+} // project euler 1st problem O(n) = 5 vs 2000n solution
