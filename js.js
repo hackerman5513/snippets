@@ -34,3 +34,38 @@ while (a <= 4000000)
 
 //find sum of even fib numbers < 4mil, loop and check last bit for 0.
 
+//euler problem 3 largest primal divisor of n
+//i know there are some fancy math algos, but i wanted something which me myself can code and parse mentally
+//largest prime factor of n
+// find all primes <= sqrt(n)
+// keep dividing primes[i--]
+
+all_primes = x =>{
+  let primes = [];
+  let current_prime = 0;
+  let i = 0;
+  while(i++<x)
+   if(is_prime(i))
+    primes.push(i)
+
+return primes;
+} 
+
+is_prime =  x =>{
+  let limit = Math.floor(Math.sqrt(x))
+  let i = 2
+   while(i<=limit)
+    if(x%i++ == 0)
+      return false
+  return true
+}
+
+largest_prime = x =>{
+  let primes = all_primes(Math.floor(Math.sqrt(x)));
+  let i = primes.length-1;
+  while(x % primes[i] != 0)
+   i--;
+  return primes[i];
+}
+
+
