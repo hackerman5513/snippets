@@ -68,4 +68,7 @@ largest_prime = x =>{
   return primes[i];
 }
 
+//palindrome task
+
+
 
